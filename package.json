@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/Elepi/prestamoFrances/issues"
   },
-  "homepage": "https://github.com/Elepi/prestamoFrances#readme"
+  "homepage": "https://github.com/Elepi/prestamoFrances#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
