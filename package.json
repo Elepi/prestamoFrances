@@ -1,0 +1,26 @@
+{
+  "name": "prestamofrances",
+  "version": "1.0.0",
+  "description": "calcula un prestamo en base al metodo frances",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Elepi/prestamoFrances.git"
+  },
+  "keywords": [
+    "prestamo",
+    "node",
+    "express",
+    "handlebars"
+  ],
+  "author": "Karen Pineda",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Elepi/prestamoFrances/issues"
+  },
+  "homepage": "https://github.com/Elepi/prestamoFrances#readme"
+}
