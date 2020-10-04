@@ -8,11 +8,11 @@ exports.calcularMetodoFrances = (capital, tasaInteres, plazo) => {
     let interes = 0;
     let tasaInteresDecimal = tasaInteres / 100;
     let cuotadeuda =0;
-    const cuotas = [];
+   // const cuotas = [];
   
     // Transformar los años en meses
     plazo = Math.round(plazo * 12);
-  
+  //console.log(plazo);
     // Calcular la cuota
     cuota =
       (capital * tasaInteresDecimal) / (1 - (1 + tasaInteresDecimal) ** -plazo);
@@ -21,10 +21,28 @@ exports.calcularMetodoFrances = (capital, tasaInteres, plazo) => {
   
    // console.log(cuota);
 
-  
+   console.log("Prestamo Frances con valor de " + capital +" y un interes de "+tasaInteres+"%");
 
+  for (let index = 0; index < plazo; index++) {
+    
+    const cuotas = [
+       mes = index+1,
+       interes = (capital * tasaInteresDecimal).toFixed(2),
+       cuotadeuda = (cuota - interes).toFixed(2),
+       capital = (capital - cuotadeuda).toFixed(2),
+      ];
+     
+      console.log("Mes: " + mes);
+      console.log("Capital: " + cuotadeuda);
+      console.log("Intereses: " + interes);
+      console.log("Cuota: " +cuota);
+      console.log("Deuda Pendiente: " + capital);
+      console.log("-------------------------------------------------");
+  }
+  
+/*
 let num;
-   console.log('│'+"Mes"+'│ '+"cuota"+' │'+interes+' │ '+cuota+' │ '+capital +' │ ' );
+   console.log('│'+"Mes"+'│ '+"cuota"+' │'+"interes"+' │ '+""cuota+' │ '+"capital" +' │ ' );
    for (let i = 1; i <= plazo; i++) {
        interes = capital * tasaInteresDecimal;
        cuotadeuda = cuota - interes; 
@@ -35,7 +53,7 @@ let num;
        num = i;
        console.log('│ '+num+'│ '+cuotadeuda+' │'+interes+' │ '+cuota+' │ '+capital +' │ ' );
      
-     }
+     }*/
  
   };
  
